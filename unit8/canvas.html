@@ -14,11 +14,10 @@
     
     <section>
       <h4>Here is my canvas tag:</h4>
-      <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+      <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
 Your browser does not support the HTML canvas tag.
 </canvas>
-      
-      
+     
     </section>
     
     <br><br>
@@ -28,13 +27,30 @@ Your browser does not support the HTML canvas tag.
   </div>
   
   <script>
-    var c = document.getElementById('theCanvas');
+    var c = document.getElementById('myCanvas');
     var ctx1 = c.getContext("2d");
-    
-ctx.beginPath();
-ctx.arc(150,150,100,0,2*Math.PI);
+    ctx.moveTo(200,0);
+ctx.lineTo(300,100);
 ctx.stroke();
-        
+ctx.moveTo(500,0);
+ctx.lineTo(100,400);
+ctx.stroke();
+ctx.moveTo(50,0);
+ctx.lineTo(190,400);
+ctx.stroke();
+ctx.moveTo(150,0);
+ctx.lineTo(100,100);
+ctx.stroke();
+ctx.moveTo(0,300);
+ctx.lineTo(200,100);
+ctx.stroke();
+ctx.moveTo(0,400);
+ctx.lineTo(150,100);
+ctx.stroke();
+    
+    ctx.beginPath();
+ctx.arc(89,200,75,0,2*Math.PI);
+ctx.stroke();
   </script>
 
 </body>
