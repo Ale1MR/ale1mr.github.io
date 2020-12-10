@@ -37,11 +37,24 @@
           keepGoing = false;
         }
       }
+       while (keepGoing)
+      {
+        theActor = prompt("Give me your age, please.  Press Cancel or press Enter with nothing entered, when you are done.","");
+        if ((theActor != null) && (theActor != ""))
+        {
+          actors[actors.length] = theActor;
+        }
+        else
+        {
+          keepGoing = false;
+        }
+      }
       
       writeTheActors();
     }
     /* ]]> */
   </script>
+  
 </head>
 
 <body onload="askForActors();">
