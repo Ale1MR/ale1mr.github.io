@@ -27,19 +27,7 @@
       
       while (keepGoing)
       {
-        theActor = prompt("Give me your name, please.  Press Cancel or press Enter with nothing entered, when you are done.","");
-        if ((theActor != null) && (theActor != ""))
-        {
-          actors[actors.length] = theActor;
-        }
-        else
-        {
-          keepGoing = false;
-        }
-      }
-       while (keepGoing)
-      {
-        theActor = prompt("Give me your age, please.  Press Cancel or press Enter with nothing entered, when you are done.","");
+        theActor = prompt("Give me your name , please.  Press Cancel or press Enter with nothing entered, when you are done.","");
         if ((theActor != null) && (theActor != ""))
         {
           actors[actors.length] = theActor;
@@ -54,16 +42,27 @@
     }
     /* ]]> */
   </script>
-  
 </head>
 
 <body onload="askForActors();">
+  
   <div id="mainDiv">
-    <h3>Infomation</h3>
+    <h3>Iformation</h3>
 
     <h4>Your name is:</h4>
 
     <div id="contentDiv"></div>
+  </div>
+  <div id="mainDiv">
+    <h3>your age is:</h3>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      for (stuff in window)
+      {
+        document.write(stuff + "<br/>");
+      }
+      /* ]]> */
+    </script>
   </div>
 </body>
 </html>
