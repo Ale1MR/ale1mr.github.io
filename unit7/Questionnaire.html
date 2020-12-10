@@ -6,31 +6,31 @@
   <title>Why Arrays 2</title>
   <script type="text/javascript">
     /* <![CDATA[ */
-    var Name = new Array();
+    var actors = new Array();
     
-    function writeYourName()
+    function writeTheActors()
     {
       var contentString = "";
       
-      for (var i = 0; i < Name.length; i++)
+      for (var i = 0; i < actors.length; i++)
       {
-        contentString += Name[i] + "<br />";
+        contentString += actors[i] + "<br />";
       }
       
       document.getElementById("contentDiv").innerHTML = contentString;
     }
 
-    function askForName()
+    function askForActors()
     {
       var keepGoing = true;
-      var yourName;
+      var theActor;
       
       while (keepGoing)
       {
-        yourNam = prompt("Give me yourname, your age,and your hobby please.  Press Cancel or press Enter with nothing entered, when you are done.","");
-        if ((yourNam != null) && (yourNam != ""))
+        theActor = prompt("Give me your name, please.  Press Cancel or press Enter with nothing entered, when you are done.","");
+        if ((theActor != null) && (theActor != ""))
         {
-          name[name.length] = yourNam;
+          actors[actors.length] = theActor;
         }
         else
         {
@@ -38,19 +38,17 @@
         }
       }
       
-      writeYourName();
+      writeTheActors();
     }
     /* ]]> */
   </script>
 </head>
 
-<body onload="askForName();">
+<body onload="askForActors();">
   <div id="mainDiv">
-    <h3>Whats your name:</h3>
+    <h3>Infomation</h3>
 
-    <h4>Whats your age:</h4>
-    
-    <h5>whats your hobby:</h5>
+    <h4>Your name is:</h4>
 
     <div id="contentDiv"></div>
   </div>
